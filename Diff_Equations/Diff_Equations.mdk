@@ -74,7 +74,7 @@ $M_{\varphi}=\{v|v\in C^1(\overline{\Omega}),v|_{\partial \Omega} =\varphi\}$ is
 $M_{0}=\{v|v\in C^1(\overline{\Omega}),v|_{\partial \Omega} =0\}$ helps to find the necessary condition of $J(v)$ being extreme value. 
 
 ~ Definition{caption:Euler Equation}
-Three equiavlent forms are listed here:
+Three equivalent forms are listed here:
 
 - $\frac{\partial }{\partial x}\left [ \frac{u_x}{\sqrt{1+u_x^2+u_y^2}} \right ]+\frac{\partial }{\partial y}\left [ \frac{u_y}{\sqrt{1+u_x^2+u_y^2}} \right ]=0$
 
