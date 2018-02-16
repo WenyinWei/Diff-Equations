@@ -88,7 +88,7 @@ The linearization of Euler equation at No.3 shows that minimal problem is simila
 <br/>
 #### Membrane Balance Problem
 ~ Definition{caption:Membrane Balance Problem}
-A tense membrane with segmental boundary fixed on a frame and another segmental boundary stressed by external force is at equilibrium with the action of external force.
+A tense membrane with segmental boundary fixed on a frame and another segmental boundary stressed by external force is at equilibrium with the action of external force. Here, $\gamma$ represents the fixed boundary, $\Gamma$ the forced boundary.
 ~
 
 ~ Definition{caption:Minimal Potential Energy Principle}
@@ -96,8 +96,23 @@ An elastomer subjected to external forces gets its minimum total potential energ
 ~
 It is similar to the problem of minimal surface one, however, added more difficulty.
 
-~ Definition(caption:Euler Equations)
-afd
+~ Definition{caption:Euler Equations}
+
+2 types of form:
+
+- Integration Form:
+ - $T\iint_{\Omega}\left ( \frac{\partial u}{\partial x} \frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\right )dxdy-\iint_{\Omega}fvdxdy-\int_{\Gamma}pvds=0, \forall v\in M_0$
+
+- Differential Form:
+ 1. $\int_{\Gamma}\left ( T\frac{\partial u}{\partial n}-p \right )vds=0,  \forall v\in M_0  $
+ 2. $T\frac{\partial u}{\partial n}=p \ \ \  (\Gamma)${#Euler2}
+ 3. $u|_{\gamma}=\varphi${#Euler3}
+
+are acquired from the handling procedure.
+~
+The equation [differential form 2](#Euler2) is not constrained by the given condition, but comes naturally when we find the minimum value. So the first boundary condition is always named __forced boundary conditions__, while the second or third boundary conditions are named __natural boundary conditions__.
+
+~
 ~
 
 <br/>
