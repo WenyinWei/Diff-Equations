@@ -1,0 +1,111 @@
+Title         : My Academic Paper
+
+Author        : You
+Affiliation   : Research institute
+Email         : you@bar.com
+
+Bibliography  : example.bib
+[INCLUDE=book]
+[INCLUDE=webtoc]
+[INCLUDE=webanchors]
+
+[TITLE]
+
+~ Begin SidePanel
+[TOC]
+~ End SidePanel
+
+~ Begin MainPanel
+
+
+# Ordinary Differential Equations    
+
+# Partial Differential Equations
+
+# Difference Equations
+
+# Methods in Mathematical Physics
+
+## Access to Equations in Physics
+Two varieties of most related mathematical equations are:
+
+- Conservation Laws,
+- Variation Principles,
+
+other principles are also included if necessary. While certain physical reality cause some specific condition equations, definite conditions.
+
+### Conservation Laws
+Three kinds of vital differential equations are discussed hereinafter.
+
+
+### Variation Principles
+
+### Conditions
+- Initial conditions indicate the equations function when $t=0$;
+- Boundary conditions indicate the equations function where the domain boundary is. 
+
+Corresponding Problems are:
+
+- Cauchy Problem: Given the initial conditions, find the function.
+
+- Boundary Problem: Given the boundary conditions, find the function. It has detailed divisions:   
+ - Dirichlet, the first boundary problem: Restrict the variable of $u$ 
+ - Neumann, the second boundary problem: Restrict the variable of $\partial u /\partial n$
+ - The third boundary problem: Restrict the variable of $\partial u /\partial n +\alpha u$
+
+
+- Mixing Problem: Given both conditions, find the function.
+
+### Well-Posedness
+~ Definition {caption:Posed}
+If the solution for a definite problem exists, being unique and stable, the problem is named well-posed, otherwise ill-posed.
+~
+
+~ Definition{caption:Stability}
+With initial conditions $\{u_0,u_{t_0}\}$ defined as an element of linear normed space $\Phi$, the solution $u$ is defined as an element of linear normed space $U$. If the problem is stable for its variables, then 
+
+Then $\forall \varepsilon>0,\exists \delta>0$, when $\left \| \{\varphi_1,\psi_1  \}-\{\varphi_2,\psi_2\} \right \|_{\Phi}<\delta,$ 
+
+$\left \| u_1-u_2 \right \|_U<\varepsilon$ is always satified.
+~
+
+
+
+
+
+
+
+
+
+
+
+## Hyperbolic Equations (Wave) 
+~ Equation
+\frac{\partial^2 u}{\partial t^2}=a^2\Delta u +f
+~
+
+## Parabolic Equations(Heat Conduction)
+~ Equation
+\frac{\partial u}{\partial t}=a^2\Delta u +f
+~
+
+
+## Potential Equations
+~ Equation
+0=a^2\Delta u +f
+~
+## Varieties of Second Order Linear Partial Differential Equations
+
+
+- Hyperbolic Equations (Wave)
+
+- Parabolic Equations (Heat Conduction)
+
+
+
+[BIB]
+
+&pagebreak;
+
+
+~ End MainPanel
