@@ -18,14 +18,16 @@ Bibliography  : example.bib
 ~ Begin MainPanel
 
 
-# Ordinary Differential Equations    
+# Ordinary Differential Equations   
+***
+
 
 # Partial Differential Equations
-
+***
 # Difference Equations
-
+***
 # Methods in Mathematical Physics
-
+***
 ## Access to Equations in Physics
 Two varieties of most related mathematical equations are:
 
@@ -44,17 +46,62 @@ Setting $\Omega$ a district of $\mathbb{R}^2$, all infinite differentiable funct
 ~
 
 ~ Lemma
-Setting $\Omega$ a bounded district in $\mathbb{R}^2$, $f(x,y)$ is continuous on $\Omega$. 
+Preconditions:
+
+- $\Omega$ a bounded district in $\mathbb{R}^2$
+- $f(x,y)$ is continuous on $\Omega$. 
 
 $\forall\varphi(x,y)\in C_0^\infty(\Omega),\iint_{\Omega} f(x,y)\varphi(x,y)dxdy=0$
 
 $\Rightarrow f(x,y) = 0$ on $\Omega$.
 ~
 
-~ Definition {caption:Minimal Surface Problem}
-To find a minimal superficial area of surface defined by function $v(x,y)$ with the restriction that $\varphi(x,y)|_{\partial \Omega}=\varphi$, which means finding $min J(v) =  min \iint_{\Omega}\sqrt{1+v_x^2+v_y^2}dxdy$.
+<br/>
+#### Minimal Surface Problem
+~ Definition {caption:Minimal Surface Problem (not sure spell right or not)}
+To find a minimal superficial area of surface defined by function $v(x,y)$ with the restriction that $v(x,y)|_{\partial \Omega}=\varphi$, 
+
+which means finding 
+
+$\min\limits_{v\in M_{\varphi}} J(v) =  \min\limits_{v\in M_{\varphi}} \iint_{\Omega}\sqrt{1+v_x^2+v_y^2}dxdy$.
 ~
-Such a problem to find a minimal of fonctionelle is called variational problem. All possible funcitons given by the conditions are called permissible function class (not sure English right or not).
+Such a problem to find a minimal of fonctionelle is called variational problem. 
+~ Definition{caption:Permissible Function Class 允许函数类/定义域 (not sure English right or not)}
+All possible functions given by the conditions are called permissible function class.
+~
+$M_{\varphi}=\{v|v\in C^1(\overline{\Omega}),v|_{\partial \Omega} =\varphi\}$ is the permissible function class of the aforementioned minimal surface problem. 
+$M_{0}=\{v|v\in C^1(\overline{\Omega}),v|_{\partial \Omega} =0\}$ helps to find the necessary condition of $J(v)$ being extreme value. 
+
+~ Definition{caption:Euler Equation}
+Three equiavlent forms are listed here:
+
+- $\frac{\partial }{\partial x}\left [ \frac{u_x}{\sqrt{1+u_x^2+u_y^2}} \right ]+\frac{\partial }{\partial y}\left [ \frac{u_y}{\sqrt{1+u_x^2+u_y^2}} \right ]=0$
+
+- $(1+u_y^2)u_{xx}-2u_xu_yu_{xy}+(1+u_x^2)u_{yy}=0$
+
+- $u_{xx}+u_{yy}=0$, if $\left | u_x \right |,\left | u_y \right |\ll 1$
+
+The Euler equation is acquired from the origin $j(\epsilon)=J(u+\epsilon v)$,$\epsilon\in \mathbb{R}, u\in M_{\varphi}, v \in M_0$ of minimal surface problem. By Green formula, it is degraded to boundary problem with internal Euler equations. It it the necessary condition for minimal surface, luckily, $j''(\epsilon)$ being positive by calculation and proving equivalence between variation problem and boundary problem.
+
+The linearization of Euler equation at No.3 shows that minimal problem is similar to the first boundary problem of Laplace equation. 
+~
+<br/>
+#### Membrane Balance Problem
+~ Definition{caption:Membrane Balance Problem}
+A tense membrane with segmental boundary fixed on a frame and another segmental boundary stressed by external force is at equilibrium with the action of external force.
+~
+
+~ Definition{caption:Minimal Potential Energy Principle}
+An elastomer subjected to external forces gets its minimum total potential energy at equilibrium of all the possible displacement. 
+~
+It is similar to the problem of minimal surface one, however, added more difficulty.
+
+~ Definition(caption:Euler Equations)
+afd
+~
+
+<br/>
+
 
 ### Conditions
 ~ Definition{caption:Defined Conditions and Problems}
