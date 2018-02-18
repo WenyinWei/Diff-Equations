@@ -1,10 +1,10 @@
 Title         : My Academic Paper
 
-Author        : You
-Affiliation   : Research institute
-Email         : you@bar.com
+Author        : Wenyin Wei
+Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
+Package       : url
 
 [INCLUDE=book]
 [INCLUDE=webtoc]
@@ -18,249 +18,192 @@ Bibliography  : example.bib
 
 ~ Begin MainPanel
 
-# Introduction     { #sec-intro }
+# Ordinary Differential Equations    
 
-Let's start with a sub section.
 
-## A short overview
+## Limit Cycles 
 
-Figure [#fig-butterfly] in Section [#sec-intro] shows a monarch
-butterfly. Note that you can drag&drop images into the editor pane to
-include them in the document, and similarly with bibtex files, latex
-style files, etc.
 
-~ Figure { #fig-butterfly; caption:"A Monarch butterfly (use the `.wide` class for wide figure)."; page-align:top}
-![butterfly]
+### Concepts 
+
+Limit cycles, or isolated periodic solutions, are the most common form of solution observed when modeling physical systems in the plane.
+
+**Definition of Limit Cycle**   A limit cycle is an isolated periodic solution.
+
+Perhaps the most famous class of differential equations that generalize the system similar to the oscillation are those first investigated by Li&eacute;nard in 1928,
+
+~ Equation 
+\ddot{x}+f(x)\dot{x}+g(x){x}=0
 ~
 
-[butterfly]: images/butterfly.png "butterfly"  { width:4em }
 
-Our contributions are:
-
-* A figure of a _butterfly_;
-* Some **mathematics**;
-* And some source code;
-* And references to Tex books [@Knuth:TeX;@Lamport:LaTeX;@Goo93;@Fberg04] and others [@Grandstrand].
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
+**Definition of Flow**   A flow on $\Re^2$ is a continuous mapping  $\pi:\Re^2 \rightarrow\Re^2$.
 
 
-# Content
+**Definition of Orbit**\/
 
-A definition of $e$ is shown in Equation [#euler]:
 
-~ Equation { #euler }
-e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n
+* $\boldsymbol{I_X}$ is the maximal  intercal of existence. 
+   
+
+* The trajectory (or orbit) through $\mathbf{x}$ is defined as $\gamma(\mathbf{x})=\{\pi (\mathbf{x},t):t\in \boldsymbol{I_X}  \}$ 
+   
+
+* The positive semiorbit is defined as $\gamma^{+}(\mathbf{x})=\{\pi (\mathbf{x},t):t>0\}$ 
+   
+
+* The negative semiorbit is defined as $\gamma^{-}(\mathbf{x})=\{\pi (\mathbf{x},t):t<0 \}$ 
+
+**Definition of Limit Set**\/
+
+$\boldsymbol{I_X}$ is the maximal  intercal of existence. 
+
+
+* The trajectory (or orbit) through $\mathbf{x}$ is defined as $\gamma(\mathbf{x})=\{\pi (\mathbf{x},t):t\in \boldsymbol{I_X}  \}$ &br;
+   A set $S$ is invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma(\mathbf{x})\subset S$ 
+   
+
+* The positive semiorbit is defined as $\gamma^{+}(\mathbf{x})=\{\pi (\mathbf{x},t):t>0\}$&br;
+   The positive limit set of a point $\mathbf{x}$ is defined as $ %
+    \Lambda ^{\mathbf{+}}=\left \{ \mathbf{y}:\text{there exists a sequence } t_n\rightarrow\infty\text{ such that }\pi(\mathbf{x},t)\rightarrow \mathbf{y}   \right \}$ &br;
+   A set $S$ is positively invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma^{+}(\mathbf{x})\subset S$ 
+   
+
+* The negative semiorbit is defined as $\gamma^{-}(\mathbf{x})=\{\pi (\mathbf{x},t):t<0 \}$ &br;
+   The negative limit set of a point $\mathbf{x}$ is defined as $ %
+    \Lambda ^{\mathbf{-}}=\left \{ \mathbf{y}:\text{there exists a sequence } t_n\rightarrow - \infty\text{ such that }\pi(\mathbf{x},t)\rightarrow \mathbf{y}   \right \}$ &br;
+   A set $S$ is invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma^{-}(\mathbf{x})\subset S$ 
+
+**Definition of Limit Cycle**
+
+A limit cycle, say, $\Gamma$, is 
+
+
+* a stable limit cycle if $\Lambda^{+}(\mathbf{x})=\Gamma$ for all $\mathbf{x}$ in some neighborhood.
+   
+
+* an unstable limit cycle if $\Lambda^{-}(\mathbf{x})=\Gamma$ for all $\mathbf{x}$ in some neighborhood.
+   
+
+* a semistable limit cycle if it is attracting on the one side and repelling on the other side.
+
+### Theorem and Application 
+
+#### The Poincar&eacute;-Bendixson Theorem 
+
+
+**The Poincar&eacute;-Bendixson Theorem** Suppose that $\gamma^+$ is contained in a bounded region in which there are finitely many critical points. Then $\Lambda^+(\gamma)$ is either
+
+
+* a single critical point;
+   
+
+* a single closed orbit;
+   
+
+* a graphic&ndash;critical points joined by heteroclinic orbits.
+
+**Corollary about Unique Limit Cycle** Let D be a bounded closed set containing no critical points and suppose that D is positively invariant. Then there exists a limit cycle contained in D.
+
+**Definition of Jordan Curve** A planar simple closed curve is called a Jordan curve.
+
+Next, consider such a universal system
+
+~ Equation { #universal system }
+\begin{aligned}
+\dot{x}= P(x,y) \dot{y}=Q(x,y)
+\end{aligned}
 ~
 
-Let's program some JavaScript:
-``` javascript
-function hello() {
-  return "hello world!"
-}
-```
 
-## There and back again
+where $P$ and $Q$ have continuous first-order partial derivatives. $\psi$ is a weighting factor that is continuously differentiable.
 
-It had a perfectly round door like a porthole, painted green, with a
-shiny yellow brass knob in the exact middle. The door opened on to a
-tube-shaped hall like a tunnel: a very comfortable tunnel without smoke,
-with paneled walls, and floors tiled and carpeted, provided with
-polished chairs, and lots and lots of pegs for hats and coats; the hobbit
-was fond of visitors. The tunnel wound on and on, going fairly but not
-quite straight into the side of the hill -- The Hill, as all the people for
-many miles round called it -- and many little round doors opened out of it,
-first on one side and then on another. No going upstairs for the hobbit:
-bedrooms, bathrooms, cellars, pantries (lots of these), wardrobes (he had
-whole rooms devoted to clothes), kitchens, dining-rooms, all were on the
-same floor, and indeed on the same passage. The best rooms were all on
-the left-hand side (going in), for these were the only ones to have
-windows, deep-set round windows looking over his garden, and meadows
-beyond, sloping down to the river.
+**Bendixson's Criteria**\/&quad;Consider system ([#universal system]) and suppose that D is a simply connected domain and that  $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)\neq 0$ in D. Then there are no limit cycles entirely contained in D.
+
+From Green's Theorem, the integrate of $\nabla\cdot(\psi \mathbf{X})$ in the region circled by limit cycle is zero. While $\nabla\cdot(\psi \mathbf{X})$ is continue on the region which cause that its sign does not change. The preceding two sentences have been contradictory.
 
 
-~ Lemma { #lemma-test; caption:"A __lemma__ caption" }
-There he lay, a vast red-golden dragon, fast asleep; thrumming came from
-his jaws and nostrils, and wisps of smoke, but his fires were low in
-slumber
+
+**Dulac's Criteria**\/&quad;Consider an annular region in system ([#universal system]), say, A, contained in an open set E. If 
+$\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)  $
+does not change sign in A, then there is at most one limit cycle entirely contained in A. 
+
+Apply Green's Theorem to the region between the two limit cycles, which is bound to be zero. Whereas the divergence does not change sign in A, contradictory to the fact.
+
+
+#### Index 
+
+**Definition of Index**\/&quad;The Index $\boldsymbol{I_X}(C)$ is defined as $\frac{\Delta \Theta }{2\pi}$, where $\Delta \Theta$ is the overall change in the angle $\Theta$.
+
+The index of a node, focus, or center is +1 and the index of a col is -1.
+
+**Theorem about Cycle Index Amount**\/&quad;The sum of the indices of the critical points contained entirely within a limit cycle is +1.
+
+
+**Theorem about Point-Cycle Relation**\/&quad;A limit cycle contains at least one critical point.
+
+#### Prove No cycle 
+
+
+When proving that a system has no limit cycles, the following items should be considered:
+
+
+1. Bendixson'x criteria;
+   
+
+* indices;
+   
+
+* invariant lines;
+   
+
+* critical points.
+
+
+
+
+
+
+
+# Partial Differential Equations
+
+# Difference Equations
+
+# Methods in Mathematical Physics
+
+## Access to Equations in Physics
+Two varieties of most related to mathematical equations are:
+
+- Conservation Laws,
+- Variation Principles,
+
+other principles are also included if necessary.
+### Conservation Laws
+### Variation Principles
+
+## Wave Equations
+## Heat Conduction Equations
+## Potential Equations
+## Varieties of Second Order Linear Partial Differential Equations
+
+- Hyperbolic Equations (Wave Equations)
+~ Equation
+u_{tt} = a^2\Delta u +f
+~
+$a$ expresses the velocity of wave transmission（String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$）.
+
+- Parabolic Equations (Heat Conduction)
+~ Equation
+        u_{t}=D\Delta u+f 
 ~
 
-~ Proof { caption:"Of Lemma [#lemma-test]" }
-Roads go ever ever on.
-~
-
-~ Todo 
-Finish the proof
-~
-
-## The dinner
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
-
-## A turn of events
-
-"Halt!" cried Gandalf, who appeared suddenly, and stood alone, with arms
-uplifted, between the advancing dwarves and the ranks awaiting them.
-"Halt!" he called in a voice like thunder, and his staff blazed forth
-with a flash like the lightning. "Dread has come upon you all! Alas! it
-has come more swiftly than I guessed."
-
-    for i:=maxint to 0 do
-    begin 
-        j:=square(root(i));
-    end;
-
-"If you mean you think it is my job to go into the secret passage first, O
-Thorin Thrain's son Oakenshield, may your beard grow ever longer," he
-said crossly, "say so at once and have done!"
-
-## A description
-
-I suppose hobbits need some description nowadays, since they have become
-rare and shy of the Big People, as they call us. They are (or were) a
-little people, about half our height, and smaller than the bearded
-Dwarves. Hobbits have no beards. There is little or no magic about them,
-except the ordinary everyday sort which helps them to disappear quietly
-and quickly when large stupid folk like you and me come blundering along,
-making a noise like elephants which they can hear a mile off. They are
-inclined to be fat in the stomach; they dress in bright colors (chiefly
-green and yellow);
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
 
 
-~ Lemma { caption:"Another lemma" }
-There is little or no magic about them, except the ordinary everyday sort
-which helps them to disappear quietly and quickly when large stupid folk
-like you and me come blundering along, making a noise like elephants
-which they can hear a mile off.
-~
 
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
 
 [BIB]
 
 &pagebreak;
 
-# An appendix { @h1:"A" }
-
-"All the same, I should like it all plain and clear," said he
-obstinately, putting on his business manner (usually reserved for people
-who tried to borrow money off him), and doing his best to appear wise and
-prudent and professional and live up to Gandalf's recommendation. "Also I
-should like to know about risks, out-of-pocket expenses, time required
-and remuneration, and so forth" -- by which he meant: "What am I going to
-get out of it? and am I going to come back alive?"
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
-
-And suddenly first one and then another began to sing as they played,
-deep-throated singing of the dwarves in the deep places of their ancient
-homes; and this is like a fragment of their song, if it can be like their
-song without their music. \[...\] As they sang the hobbit felt the love
-of beautiful things made by hands and by cunning and by magic moving
-through him, a fierce and jealous love, the desire of the hearts of
-dwarves. Then something Tookish woke up inside him, and he wished to go
-and see the great mountains, and hear the pine-trees and the waterfalls,
-and explore the caves, and wear a sword instead of a walking-stick. He
-looked out of the window. The stars were out in a dark sky above the
-trees. He thought of the jewels of the dwarves shining in dark caverns.
-Suddenly in the wood beyond The Water a flame leapt up -- probably
-somebody lighting a wood-fire -- and he thought of plundering dragons
-settling on his quiet Hill and kindling it all to flames. He shuddered;
-and very quickly he was plain Mr. Baggins of Bag-End, Under-Hill, again.
-He got up trembling.
 
 ~ End MainPanel
