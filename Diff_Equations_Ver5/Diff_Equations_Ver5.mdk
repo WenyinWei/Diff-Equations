@@ -5,7 +5,7 @@ Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
 Package       : url
-
+Aligned { replace:"~Math&nl;\begin{aligned}&nl;&source;&nl;\end{aligned}&nl;~" }
 [INCLUDE=book]
 [INCLUDE=webtoc]
 [INCLUDE=webanchors]
@@ -503,6 +503,7 @@ When proving that a system has no limit cycles, the following items should be co
 * Indices;
 * Invariant lines;
 * Critical points.
+<br/>
 
 ## Applications in Circuit
 
@@ -521,19 +522,35 @@ Discovers have been found when investigating the circular series connection of R
 
 ~ Equation{#RLC}
 \begin{aligned}
-  L\frac{di_L}{dt}&=&v_L&=&v_C-f(i_L)\\
-  C\frac{dv_C}{dt}&=&i_C&=&-i_L\\
+  L\frac{di_L}{dt}&=&v_L&=&v_C-f(i_L),\\
+  C\frac{dv_C}{dt}&=&i_C&=&-i_L.\\
 \end{aligned}
 ~
 The Equation [#RLC] is transformed to differential equations 
-
-~ Equation{#Lienard;caption:Lienard Equation}
+### The Li&eacute;nard Equation
+~ Equation{#lienard}
 \begin{aligned}
-  \frac{dx}{dt}&=&y-f(x)\\
-  \frac{dy}{dt}&=&-x,\\
+  \frac{dx}{dt}&=y-f(x),\\
+  \frac{dy}{dt}&=-x,\\
 \end{aligned}
 ~
-which is called _Li&eacute;nard equation_ [#lienard].
+
+Its Liapunov function,
+~ Aligned
+W(x,y)&=(x^2+y^2)/2\\
+\dot{W}&=x(y-f(x))+y(-x)=-x f(x)
+~
+, allows $W$ a strict Liapunov function.
+### The van der Pol Equation
+Let $f(x)=x^3-x$, Eq. [#lienard] becomes _van der Pol equation_.
+~ Theorem{caption:van der Pol Oscillation}
+There is one nontrivial periodic solution of the can der Pol equation, and every other solution (except the equilibrium point at the origin) tends to this periodic solution. "The system oscillates."
+~
+~ Proposition
+Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^_$ before returning to $v^+$. (v for y-nullcline, g for x-nullcline)
+~
+
+
 # Partial Differential Equations
 
 # Difference Equations
