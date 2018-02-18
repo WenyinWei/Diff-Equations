@@ -1,3 +1,6 @@
+
+
+
 Title         : My Academic Paper
 
 Author        : Wenyin Wei
@@ -553,14 +556,22 @@ Let $f(x)=x^3-x$, Eq. [#lienard] becomes _van der Pol equation_.
 ![irur]
 ~
 [irur]: images/irur.png "irur" { width:auto; max-width:60% }
+
+~ Proposition{#circular; caption:Circular Characteristic}
+Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^-$ before returning to $v^+$. (v for y-nullcline, g for x-nullcline) It can be proved by integrating $x'(t), y'(t)$ on time interval. 
+~
+
+
+~ Aligned
+&\text{Circular Characteristic \& Streams do not cross}\\
+  \Rightarrow & \alpha(y):v^+\rightarrow v^-  \searrow\\
+ \Rightarrow & \alpha(y)+y \searrow\\
+~
+
+
 ~ Theorem{caption:van der Pol Oscillation}
-There is one nontrivial periodic solution of the can der Pol equation, and every other solution (except the equilibrium point at the origin) tends to this periodic solution. "The system oscillates."
+There is one nontrivial periodic solution of _the can der Pol equation_, and every other solution (except the equilibrium point at the origin) tends to this periodic solution. "The system oscillates."
 ~
-~ Proposition
-Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^-$ before returning to $v^+$. (v for y-nullcline, g for x-nullcline)
-~
-
-
 
 ~ Theorem
 The Poincar&eacute; map has a unique fixed point in $v^+$. Furthermore, the sequence $P^n(y_0)$ tends to this fixed point as $n\to \infty$ for any nonzero $y_0\in v^+$.
@@ -571,11 +582,18 @@ The Poincar&eacute; map has a unique fixed point in $v^+$. Furthermore, the sequ
 
 Fitzhugh and Nagumo et. al. produced a simpler model of the Hodgkin-Huxley model, similar to systems in circuit system. You can imagine the limit cycle is divided to 2 limit lines with ends at the origin and infinity.
 
+~ Equation{#fitzhugh-nagumo}
+\begin{aligned}
+  \frac{dx}{dt}&=y+x-x^3/3+I,\\
+  \frac{dy}{dt}&=-x+a-by,\\
+\end{aligned}
+~
 ~ Figure{caption:Fitzhugh-Nagumo system}
 ![Fitzhugh-Nagumo]
 
 [Fitzhugh-Nagumo]: images/Fitzhugh-Nagumo.png "Fitzhugh-Nagumo" { width:auto; max-width:60% }
 ~
+
 
 
 # Partial Differential Equations
