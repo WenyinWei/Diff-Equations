@@ -19,6 +19,9 @@ Aligned { replace:"~Math&nl;\begin{aligned}&nl;&source;&nl;\end{aligned}&nl;~" }
 ~ Begin MainPanel
 
 # Ordinary Differential Equations    
+***
+
+Reference books are listed here.[@hirsch2012differential;@lynch2009dynamical].
 
 ## Fundamentals of Differential Equations 
 
@@ -43,8 +46,6 @@ For first-order differential equations, following ways are available.
 
 
 
-
-&pagebreak;
 ## Planar Systems 
 
 ### Basic Classification 
@@ -56,7 +57,8 @@ For complex eigenvalues:
 For repeated eigenvalues:
 
 ### Linearization and Hartman's Theorem 
-Reference books are listed here.[@lynch2009dynamical,@hirsch2012differential]
+
+
 
 Suppose that the nonlinear autonomous system
 
@@ -90,13 +92,14 @@ has a critical point at $(u,v)$.Let $X=x-u,Y=y-v$, the system becomes
 ~
 
 
-**Definition of Hyperbolic** 
 
+~ Definition{caption:Hyperbolic}
 A critical point is called hyperbolic critical point if the real part of the eigenvalues of the Jacobian matrix $J(u,v)$ are nonzero. If the real part of either of the eigenvalues of the Jacobian are equal to zero, then the critical point is called nonhyperbolic.
+~
 
 **Hartman's Theorem**
 
-Suppose that $(u,v)$ is a hyperbolic critical point of system ([#nonlinear]).Then there is a neighborhood of this critical point on which the phase portrait for the nonlinear system resembles that of the linearized system. In other words, there is a curvilinear continuous change of coordinates of taking one phase portrait to the other, and in a small region around the critical point, the portraits are qualitatively equivalent.
+Suppose that $(u,v)$ is a hyperbolic critical point of system [#nonlinear].Then there is a neighborhood of this critical point on which the phase portrait for the nonlinear system resembles that of the linearized system. In other words, there is a curvilinear continuous change of coordinates of taking one phase portrait to the other, and in a small region around the critical point, the portraits are qualitatively equivalent.
 
 Note that the stable $E_S$ and unstable $E_U$ manifolds of the nonlinear system will be tangent to the manifolds $W_S,W_U$ of the linearized system near the relevant critical point, but their trajectories diverge as one moves away from the critical point.
 
@@ -545,12 +548,19 @@ W(x,y)&=(x^2+y^2)/2\\
 , allows $W$ a strict Liapunov function.
 ### The van der Pol Equation
 Let $f(x)=x^3-x$, Eq. [#lienard] becomes _van der Pol equation_.
+
+~ Figure{caption:van der Pol Oscillaion}
+![irur]
+~
+[irur]: images/irur.png "irur" { width:auto; max-width:60% }
 ~ Theorem{caption:van der Pol Oscillation}
 There is one nontrivial periodic solution of the can der Pol equation, and every other solution (except the equilibrium point at the origin) tends to this periodic solution. "The system oscillates."
 ~
 ~ Proposition
 Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^_$ before returning to $v^+$. (v for y-nullcline, g for x-nullcline)
 ~
+
+
 
 ~ Theorem
 The Poincar&eacute; map has a unique fixed point in $v^+$. Furthermore, the sequence $P^n(y_0)$ tends to this fixed point as $n\to \infty$ for any nonzero $y_0\in v^+$.
@@ -564,16 +574,16 @@ Fitzhugh and Nagumo et. al. produced a simpler model of the Hodgkin-Huxley model
 ~ Figure{caption:Fitzhugh-Nagumo system}
 ![Fitzhugh-Nagumo]
 
-[Fitzhugh-Nagumo]: images/Fitzhugh-Nagumo.jpg "Fitzhugh-Nagumo" { width:auto; max-width:90% }
+[Fitzhugh-Nagumo]: images/Fitzhugh-Nagumo.png "Fitzhugh-Nagumo" { width:auto; max-width:60% }
 ~
 
 
 # Partial Differential Equations
-
+***
 # Difference Equations
-
+***
 # Methods in Mathematical Physics
-
+***
 ## Access to Equations in Physics
 Two varieties of most related to mathematical equations are:
 
@@ -593,13 +603,15 @@ other principles are also included if necessary.
 ~ Equation
 u_{tt} = a^2\Delta u +f
 ~
-$a$ expresses the velocity of wave transmission（String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$）.
+
+$a$ expresses the velocity of wave transmission (String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$).
 
 - Parabolic Equations (Heat Conduction)
 ~ Equation
         u_{t}=D\Delta u+f 
 ~
 
+## The Lorenz System
 
 
 
