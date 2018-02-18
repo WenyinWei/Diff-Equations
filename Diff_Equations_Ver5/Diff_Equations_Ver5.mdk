@@ -26,7 +26,7 @@ Package       : url
 There are several fundamental approaches to tackle ode problems.
 
 For first-order differential equations, following ways are available.
-### Seperable Differential Equations 
+### Separable Differential Equations 
 
 ### Exact Differential Equations 
 
@@ -49,7 +49,7 @@ For first-order differential equations, following ways are available.
 
 ### Basic Classification 
 
-For real distinct eigencalues:
+For real distinct eigenvalues:
 
 For complex eigenvalues:
 
@@ -90,20 +90,20 @@ has a critical point at $(u,v)$.Let $X=x-u,Y=y-v$, the system becomes
 ~
 
 
-**Definition of Hyperbolic**\/    
+**Definition of Hyperbolic** 
 
-A critical point is called hyperbolic critical point if the real part of the eigenvalues of the Jacobian matrix $J(u,v)$ are nonzero. If the real part of either of the eigencalues of the Jacobian are equal to zero, then the critical point is called nonhyperbolic.
+A critical point is called hyperbolic critical point if the real part of the eigenvalues of the Jacobian matrix $J(u,v)$ are nonzero. If the real part of either of the eigenvalues of the Jacobian are equal to zero, then the critical point is called nonhyperbolic.
 
-**Hartman's Theorem**\/
+**Hartman's Theorem**
 
 Suppose that $(u,v)$ is a hyperbolic critical point of system ([#nonlinear]).Then there is a neighborhood of this critical point on which the phase portrait for the nonlinear system resembles that of the linearized system. In other words, there is a curvilinear continuous change of coordinates of taking one phase portrait to the other, and in a small region around the critical point, the portraits are qualitatively equivalent.
 
 Note that the stable $E_S$ and unstable $E_U$ manifolds of the nonlinear system will be tangent to the manifolds $W_S,W_U$ of the linearized system near the relevant critical point, but their trajectories diverge as one moves away from the critical point.
 
-### Constructing Phase Plana Diagrams 
+### Constructing Phase Planar Diagrams 
 
 
-The method for plotting phase portraits for nonlinear planar systems hacing hyperbolic citical points may be broken down into three distinxt steps:
+The method for plotting phase portraits for nonlinear planar systems near hyperbolic critical points may be broken down into three distinct steps:
 
 
 * Locate all of the critical points.
@@ -112,7 +112,7 @@ The method for plotting phase portraits for nonlinear planar systems hacing hype
 * Linearize and classify each critical point according to Hartman's theorem.
    
 
-* Determine the isoclines and use dy/dx to botain slopes of trajectories.
+* Determine the isoclines and use $dy/dx$ to botain slopes of trajectories.
 
 For nonhyperbolic systems, some examples are listed below.
 
@@ -122,6 +122,7 @@ For nonhyperbolic systems, some examples are listed below.
 ~ Equation 
    \dot{x}=y^2,\qquad   \dot{y}=x
 ~
+
 ~ Figure { #fig-cusp; caption:"An image of Lena."; page-align:here }
 ![cusp]
 ~
