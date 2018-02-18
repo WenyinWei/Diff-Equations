@@ -284,7 +284,7 @@ The critical point at $O$ is a saddle with manifold lying along the axes. The cr
 
 **Definition of Structurally Unstable**
 
-If small perturbations are introduced into system &ndash; to model other factors, for example &ndash; then the qualitative behavior changes. The periodic cycles can be destroyed by adding terms into the right-hand sides of system ([#unstable]), which is structurally unstable (or not robust).
+If small perturbations are introduced into system &ndash; to model other factors, for example &ndash; then the qualitative behavior changes. The periodic cycles can be destroyed by adding terms into the right-hand sides of system [#unstable], which is structurally unstable (or not robust).
 
 The former data concerning the populations of predators and preys illustrates that the populations periodically raise and fall and that the maximum and minimum values are relatively constant, which is not true for the Lotka-Volterra model. In 1975, Holling and Tanner constructed a system of differential equations whose solutions have the same amplitudes in the long term, regardless of the initial populations. 
 
@@ -465,7 +465,7 @@ Suppose that $\gamma^+$ is contained in a bounded region in which there are fini
 
 Next, consider such a universal system
 
-~ Equation { #universal system }
+~ Equation { #universal }
 \begin{aligned}
 \dot{x}= P(x,y) \dot{y}=Q(x,y)
 \end{aligned}
@@ -474,13 +474,13 @@ Next, consider such a universal system
 
 where $P$ and $Q$ have continuous first-order partial derivatives. $\psi$ is a weighting factor that is continuously differentiable.
 
-**Bendixson's Criteria**\/&quad;Consider system ([#universal system]) and suppose that D is a simply connected domain and that  $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)\neq 0$ in D. Then there are no limit cycles entirely contained in D.
+**Bendixson's Criteria**\/&quad;Consider system [#universal] and suppose that D is a simply connected domain and that  $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)\neq 0$ in D. Then there are no limit cycles entirely contained in D.
 
 From Green's Theorem, the integrate of $\nabla\cdot(\psi \mathbf{X})$ in the region circled by limit cycle is zero. While $\nabla\cdot(\psi \mathbf{X})$ is continue on the region which cause that its sign does not change. The preceding two sentences have been contradictory.
 
 
 
-**Dulac's Criteria**\/&quad;Consider an annular region in system ([#universal system]), say, A, contained in an open set E. If 
+**Dulac's Criteria**\/&quad;Consider an annular region in system [#universal], say, A, contained in an open set E. If 
 $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)  $
 does not change sign in A, then there is at most one limit cycle entirely contained in A. 
 
