@@ -550,7 +550,9 @@ There is one nontrivial periodic solution of the can der Pol equation, and every
 Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^_$ before returning to $v^+$. (v for y-nullcline, g for x-nullcline)
 ~
 
-
+~ Theorem
+The Poincar&eacute; map has a unique fixed point in $v^+$. Furthermore, the sequence $P^n(y_0)$ tends to this fixed point as $n\to \infty$ for any nonzero $y_0\in v^+$.
+~
 # Partial Differential Equations
 
 # Difference Equations
