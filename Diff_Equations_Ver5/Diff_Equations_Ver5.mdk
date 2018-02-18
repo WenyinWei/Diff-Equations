@@ -229,10 +229,12 @@ By adjusting the values of parameters to make $R$ appear in the first quadrant.
 
 ~ Begin Figure { caption:"Two images of competing species models. (a) is a coexistence end.($\delta=d=1,\beta=b=2,\gamma=c=3$) (b) is a mutual exclusion end.($\delta=d=1,\beta=b=2,\gamma=c=0.5$) " }
 
-| ![exclusion]      |     ![coexistence]   |
-| (a) Coexistence   |  (b) Mutual Exclusion| 
 
-
+~ Table{ caption="An example table." }
+| (a) Coexistence | (b) Mutual Exclusion |
+|:~~~~~~~~~~~~~~~:|:~~~~~~~~~~~~~~~~~~~~:|
+| ![exclusion]    | ![coexistence]       |
+~
 
 ~ End Figure
 
