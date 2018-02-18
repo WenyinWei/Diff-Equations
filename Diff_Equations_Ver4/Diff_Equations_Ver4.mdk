@@ -40,7 +40,7 @@ Perhaps the most famous class of differential equations that generalize the syst
 **Definition of Flow**   A flow on $\Re^2$ is a continuous mapping  $\pi:\Re^2 \rightarrow\Re^2$.
 
 
-**Definition of Orbit**\/
+**Definition of Orbit**
 
 
 * $\boldsymbol{I_X}$ is the maximal  intercal of existence. 
@@ -54,7 +54,7 @@ Perhaps the most famous class of differential equations that generalize the syst
 
 * The negative semiorbit is defined as $\gamma^{-}(\mathbf{x})=\{\pi (\mathbf{x},t):t<0 \}$ 
 
-**Definition of Limit Set**\/
+**Definition of Limit Set**
 
 $\boldsymbol{I_X}$ is the maximal  intercal of existence. 
 
@@ -149,14 +149,8 @@ When proving that a system has no limit cycles, the following items should be co
 
 
 1. Bendixson'x criteria;
-   
-
 * indices;
-   
-
 * invariant lines;
-   
-
 * critical points.
 
 
