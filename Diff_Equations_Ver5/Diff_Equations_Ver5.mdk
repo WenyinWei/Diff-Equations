@@ -282,7 +282,7 @@ The critical point at $O$ is a saddle with manifold lying along the axes. The cr
 
 
 
-**Definition of Structurally Unstable**\/
+**Definition of Structurally Unstable**
 
 If small perturbations are introduced into system &ndash; to model other factors, for example &ndash; then the qualitative behavior changes. The periodic cycles can be destroyed by adding terms into the right-hand sides of system ([#unstable]), which is structurally unstable (or not robust).
 
