@@ -112,7 +112,7 @@ The method for plotting phase portraits for nonlinear planar systems near hyperb
 * Linearize and classify each critical point according to Hartman's theorem.
    
 
-* Determine the isoclines and use $dy/dx$ to botain slopes of trajectories.
+* Determine the isoclines and use $dy/dx$ to obtain slopes of trajectories.
 
 For nonhyperbolic systems, some examples are listed below.
 
@@ -160,9 +160,8 @@ For nonhyperbolic systems, some examples are listed below.
 A+B\leftrightharpoons C
 ~
 
-   ~ Equation 
-        \dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc
-    
+~ Equation 
+\dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc    
 ~
 
    
@@ -172,12 +171,12 @@ A+B\leftrightharpoons C
 * Rabbits' Epidemic Model
    
    Suppose that $H$ is a population of healthy rabbits and $I$ is the subpopulation of infected rabbits that never recover once infected, both measured in millions. The following differential equations can be used to model the dynamics of the system:
-   ~ Equation 
-        \dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc
-    
+ 
+~ Equation 
+\dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc
 ~
 
-   where $b$ is the birth rate, $d$ is the natural death rate, $\delta$ is the rate of deathe of the diseased rabbits, and $\tau$ is the rate at which the disease is transmitted.
+   where $b$ is the birth rate, $d$ is the natural death rate, $\delta$ is the rate of death of the diseased rabbits, and $\tau$ is the rate at which the disease is transmitted.
 
 ~ Begin Figure { caption:"A streamline phase portrait for Rabbits' Epidemic model when $b=4,d=1,\delta=6,\tau=1$." }
 ~ Begin Center 
@@ -252,7 +251,7 @@ A very simple differential equation is first used by Voltera in 1926 and known a
 
 
 
-* The term $\alpha x$ represents the growth of the population of prey in the absence of any predators. This is boviously a crude model; the population of a species cannot increase forever.
+* The term $\alpha x$ represents the growth of the population of prey in the absence of any predators. This is obviously a crude model; the population of a species cannot increase forever.
    
 
 * The terms $-cxy, +\gamma x y$ represents species interaction. The population of prey suffers and predators gain from the interaction.
@@ -260,7 +259,7 @@ A very simple differential equation is first used by Voltera in 1926 and known a
 
 * The term $-\delta y$ represents the extinction of predators in the absence of prey.
 
-Since the system has solution curves (the differential equations are seperable) given by $x^\delta y^\alpha e^{\gamma x}e^{cy}=K$, where $K$ is a constant.
+Since the system has solution curves (the differential equations are separable) given by $x^\delta y^\alpha e^{\gamma x}e^{cy}=K$, where $K$ is a constant.
 
 There are two critical points: 
 
@@ -334,13 +333,13 @@ The differential equations are given by
     \end{split}
 ~
 
-where $S$ is the susceptoble population, $I$ is the infected population, $b$ is the birth rate, $c$ is the density dependency of birth rates, $d$ is the mortality rate. The functions $f_S$ and $f_I$ represent predator interaction with a saturating functional response, given by
+where $S$ is the susceptible population, $I$ is the infected population, $b$ is the birth rate, $c$ is the density dependency of birth rates, $d$ is the mortality rate. The functions $f_S$ and $f_I$ represent predator interaction with a saturating functional response, given by
 
 ~ Equation 
     f_S(S,I,P)=\frac{PS}{h_S+S+\theta \gamma I},\qquad f_I(S,I,P)=\frac{P\theta I}{h_S+S+\theta \gamma I}
 ~
 
-where $P$ is a predation intensity term, $\theta$ represents the selectivity of the predator, $h_S$ represents a half-saturation constant of predators for susceptible hosts, and $\gamma$ is a handling time for susceptibe and infected hosts. A typical parameter choice is that $b=0.4,c=1/20,\theta=5,\alpha=\beta=d=0.05,P=1,\gamma=h_S=1$, which catalyze a host-parasite system coexistence in a periodic manner.
+where $P$ is a predation intensity term, $\theta$ represents the selectivity of the predator, $h_S$ represents a half-saturation constant of predators for susceptible hosts, and $\gamma$ is a handling time for susceptible and infected hosts. A typical parameter choice is that $b=0.4,c=1/20,\theta=5,\alpha=\beta=d=0.05,P=1,\gamma=h_S=1$, which catalyze a host-parasite system coexistence in a periodic manner.
 
 #### Other Characteristics 
 
@@ -349,7 +348,7 @@ Some other characteristic ignored will be listed.
 
 
 
-* Age classes&ndash;for example, young,matur,and old; time lags need to be introduced into the differential equations. 
+* Age classes&ndash;for example, young, mature, and old; time lags need to be introduced into the differential equations. 
    
 
 * Diseases&ndash;epidemics affecting one or more species.
@@ -393,7 +392,7 @@ Perhaps the most famous class of differential equations that generalize the syst
 **Definition of Orbit**
 
 
-* $\boldsymbol{I_X}$ is the maximal  intercal of existence. 
+* $\boldsymbol{I_X}$ is the maximal  interval of existence. 
    
 
 * The trajectory (or orbit) through $\mathbf{x}$ is defined as $\gamma(\mathbf{x})=\{\pi (\mathbf{x},t):t\in \boldsymbol{I_X}  \}$ 
