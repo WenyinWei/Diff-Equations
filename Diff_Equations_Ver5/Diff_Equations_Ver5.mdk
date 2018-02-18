@@ -1,0 +1,552 @@
+Title         : My Academic Paper
+
+Author        : Wenyin Wei
+Email         : weiwy16@mails.tsinghua.edu.cn
+
+Bibliography  : example.bib
+Package       : url
+
+[INCLUDE=book]
+[INCLUDE=webtoc]
+[INCLUDE=webanchors]
+
+[TITLE]
+
+~ Begin SidePanel
+[TOC]
+~ End SidePanel
+
+~ Begin MainPanel
+
+# Ordinary Differential Equations    
+
+## Fundamentals of Differential Equations 
+
+
+There are several fundamental approaches to tackle ode problems.
+
+For first-order differential equations, following ways are available.
+### Seperable Differential Equations 
+
+### Exact Differential Equations 
+
+### Homogeneous Differential Equations 
+
+### Linear Differential Equations 
+
+
+
+### Series Solutions 
+
+
+### Laplace Transform 
+
+
+
+
+&pagebreak;
+## Planar Systems 
+
+### Basic Classification 
+
+For real distinct eigencalues:
+
+For complex eigenvalues:
+
+For repeated eigenvalues:
+
+### Linearization and Hartman's Theorem 
+[@lynch2009dynamical]
+
+Suppose that the nonlinear autonomous system
+
+~ Equation { #nonlinear }
+\dot{x}=P(x,y),   \dot{y}=Q(x,y)
+~
+
+
+has a critical point at $(u,v)$.Let $X=x-u,Y=y-v$, the system becomes
+~ Equation 
+    \begin{pmatrix}
+        \dot{X}\\
+        \dot{Y}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+        P(X+u,Y+v)\\ 
+        Q(X+u,Y+v)
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+        P(u,v)\\ 
+        Q(u,v)
+        \end{pmatrix}+J(u,v)\begin{pmatrix}
+        X\\ 
+        Y
+        \end{pmatrix}+\begin{pmatrix}
+        R(X,Y)\\ 
+        S(X,Y)
+        \end{pmatrix}\\
+~
+
+
+**Definition of Hyperbolic**\/    
+
+A critical point is called hyperbolic critical point if the real part of the eigenvalues of the Jacobian matrix $J(u,v)$ are nonzero. If the real part of either of the eigencalues of the Jacobian are equal to zero, then the critical point is called nonhyperbolic.
+
+**Hartman's Theorem**\/
+
+Suppose that $(u,v)$ is a hyperbolic critical point of system ([#nonlinear]).Then there is a neighborhood of this critical point on which the phase portrait for the nonlinear system resembles that of the linearized system. In other words, there is a curvilinear continuous change of coordinates of taking one phase portrait to the other, and in a small region around the critical point, the portraits are qualitatively equivalent.
+
+Note that the stable $E_S$ and unstable $E_U$ manifolds of the nonlinear system will be tangent to the manifolds $W_S,W_U$ of the linearized system near the relevant critical point, but their trajectories diverge as one moves away from the critical point.
+
+### Constructing Phase Plana Diagrams 
+
+
+The method for plotting phase portraits for nonlinear planar systems hacing hyperbolic citical points may be broken down into three distinxt steps:
+
+
+* Locate all of the critical points.
+   
+
+* Linearize and classify each critical point according to Hartman's theorem.
+   
+
+* Determine the isoclines and use dy/dx to botain slopes of trajectories.
+
+For nonhyperbolic systems, some examples are listed below.
+
+
+
+1. Classical Cusp 
+~ Equation 
+   \dot{x}=y^2,\qquad   \dot{y}=x
+~
+~ Figure { #fig-cusp; caption:"An image of Lena."; page-align:here }
+![cusp]
+~
+
+[SIR]: images/SIR.jpg "SIR" { width:auto; max-width:90% }
+
+[rabbits]: images/rabbits.jpg "rabbits" { width:auto; max-width:90% }
+
+[holling]: images/holling.jpg "holling" { width:auto; max-width:90% }
+
+[exclusion]: images/exclusion.jpg "exclusion" { width:auto; max-width:90% }
+
+[Epidemic]: images/Epidemic.jpg "Epidemic" { width:auto; max-width:90% }
+
+[cusp]: images/cusp.jpg "cusp" { width:auto; max-width:90% }
+
+[coexistence]: images/coexistence.jpg "coexistence" { width:auto; max-width:90% }
+
+   
+~ Begin Figure { caption:"A streamline phase portrait for SIR model when $\tau=0.003,r=0.5$." }
+
+~ Begin Center 
+![SIR]
+~ End Center
+
+   
+~ End Figure
+
+
+   
+
+* Chemical Kinetics
+   
+~ Math
+A+B\leftrightharpoons C
+~
+
+   ~ Equation 
+        \dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc
+    
+~
+
+   
+
+   
+
+* Rabbits' Epidemic Model
+   
+   Suppose that $H$ is a population of healthy rabbits and $I$ is the subpopulation of infected rabbits that never recover once infected, both measured in millions. The following differential equations can be used to model the dynamics of the system:
+   ~ Equation 
+        \dot{b}=k_rc-k_fab,\qquad   \dot{c}=k_f ab-k_rc
+    
+~
+
+   where $b$ is the birth rate, $d$ is the natural death rate, $\delta$ is the rate of deathe of the diseased rabbits, and $\tau$ is the rate at which the disease is transmitted.
+
+~ Begin Figure { caption:"A streamline phase portrait for Rabbits' Epidemic model when $b=4,d=1,\delta=6,\tau=1$." }
+~ Begin Center 
+![rabbits]
+
+        
+~ End Center
+
+~ Empty { height:'-0.5em' }
+
+~
+
+   
+~ End Figure
+
+
+
+&pagebreak;
+## Interacting Species 
+
+The theory of planar ODEs is applied to the study of interacting species. The models are restricted in that external factors such as pollution,environment, refuge, age classes, and other species interactions are ignored. However, even these restricted systems give useful results.
+
+### Competing Species 
+
+
+Suppose that there are two species in competition with one another in an environment where the common food supply is limited. Following equations are to describe the system:
+~ Equation 
+    \dot{x}=x(\beta-\delta x-\gamma y),\qquad   \dot{y}=y(b-dy-cx)
+~
+
+where $\beta, \delta, \gamma, a,b,c,x(t),y(t)$ are all positive.
+
+
+
+* The terms $\beta x -\delta x^2$ and $by-dy^2$ represent the usual logistic growth of one species(Verhulst's equation).
+   
+
+* Both species suffer as a result of competition over a limited food supply, hence the terms $-\gamma x y$ and $-cxy$ in $\dot{x}$ and $\dot{y}$
+
+Four equilibrium points are found:
+
+
+~ Math
+O=\left ( 0,0 \right ),P=\left ( 0,\frac{b}{d} \right ),Q=\left ( \frac{\beta}{\delta},0 \right ),R=\left ( \frac{\gamma b-\beta d}{\gamma c - \delta d}, \frac{\beta c-\delta b}{\gamma c - \delta d}\right )
+~
+
+
+By adjusting the values of parameters to make $R$ appear in the first quadrant.
+
+
+~ Begin Figure { caption:"Two images of competing species models. (a) is a coexistence end.($\delta=d=1,\beta=b=2,\gamma=c=3$) (b) is a mutual exclusion end.($\delta=d=1,\beta=b=2,\gamma=c=0.5$) " }
+
+| ![exclusion]      |     ![coexistence]   |
+| (a) Coexistence   |  (b) Mutual Exclusion| 
+
+
+
+~ End Figure
+
+
+
+### Predator-Prey Models 
+
+#### Lotka-Volterra model 
+
+A very simple differential equation is first used by Voltera in 1926 and known as the $Lotka-Volterra model$.
+
+~ Equation { #unstable }
+    \dot{x}=x(\alpha-cy),\qquad   \dot{y}=y(\gamma x-\delta)
+~
+
+
+
+
+* The term $\alpha x$ represents the growth of the population of prey in the absence of any predators. This is boviously a crude model; the population of a species cannot increase forever.
+   
+
+* The terms $-cxy, +\gamma x y$ represents species interaction. The population of prey suffers and predators gain from the interaction.
+   
+
+* The term $-\delta y$ represents the extinction of predators in the absence of prey.
+
+Since the system has solution curves (the differential equations are seperable) given by $x^\delta y^\alpha e^{\gamma x}e^{cy}=K$, where $K$ is a constant.
+
+There are two critical points: 
+
+
+~ Math
+O=\left ( 0,0 \right ),\qquad P=\left ( \frac{\delta}{\gamma},\frac{\alpha}{c} \right )
+~
+
+
+The critical point at $O$ is a saddle with manifold lying along the axes. The critical point at $P$ is a center with solutions circling it.
+
+#### Holling-Tanner model 
+
+
+
+
+
+**Definition of Structurally Unstable**\/
+
+If small perturbations are introduced into system &ndash; to model other factors, for example &ndash; then the qualitative behavior changes. The periodic cycles can be destroyed by adding terms into the right-hand sides of system ([#unstable]), which is structurally unstable (or not robust).
+
+The former data concerning the populations of predators and preys illustrates that the populations periodically raise and fall and that the maximum and minimum values are relatively constant, which is not true for the Lotka-Volterra model. In 1975, Holling and Tanner constructed a system of differential equations whose solutions have the same amplitudes in the long term, regardless of the initial populations. 
+
+~ Equation 
+\dot{x}=x(1-\frac{x}{7})    -\frac{6xy}{7+7x},\qquad   \dot{y}= \frac{y}{5} (1-\frac{Ny}{x})
+~
+
+
+
+
+* The term $ x(1-x/7)$ represents the usual logistic growth in the absence of predators.
+   
+
+* The term $-6xy/(7+7x) $ represents the effect of predators subject to a maximum predation rate.
+   
+
+* The term $-\delta y$ denotes the predator growth rate when a maximum of $x/N$ predators is supported by $x$ prey.
+
+When $N=2.5$, the populations eventually settle down to constant values. If there are any natural disasters or diseases, for example, then the populations would both decrease but eventually return to the stable values without periodic behavior.
+
+When $N=0.5$, the populations eventually rise and fall periodically regardless of the initial values. The isolated periodic trajectory is known as a $stable\ limit\ cycle$ in Figure [#stable].
+
+
+~ Begin Figure { #stable ; caption:"A streamline phase portrait for Holling-Tanner model when $N=0.5$.The stable limit cycle around (1,2)" }
+
+~ Begin Center 
+![holling]
+~ End Center
+
+~ Empty { height:'-0.5em' }
+
+~
+
+~ End Figure
+
+
+### Other Characteristics Affecting Interacting Species 
+
+
+#### Host-Parasite System 
+
+
+A microparasute-zooplankton-fish system is considered as an example of other characteristics affects. Hall et al. considered a stable host-parasite system subject to selective predation by a predator species.
+
+The differential equations are given by
+
+~ Equation 
+    \begin{split}
+        \dot{S} &= bS[1-c(S+I)]-dS-\beta SI-f_S(S,I,P),\\
+        \dot{I} &= \beta SI-(d+\alpha)I-f_1(S,I,P),
+    \end{split}
+~
+
+where $S$ is the susceptoble population, $I$ is the infected population, $b$ is the birth rate, $c$ is the density dependency of birth rates, $d$ is the mortality rate. The functions $f_S$ and $f_I$ represent predator interaction with a saturating functional response, given by
+
+~ Equation 
+    f_S(S,I,P)=\frac{PS}{h_S+S+\theta \gamma I},\qquad f_I(S,I,P)=\frac{P\theta I}{h_S+S+\theta \gamma I}
+~
+
+where $P$ is a predation intensity term, $\theta$ represents the selectivity of the predator, $h_S$ represents a half-saturation constant of predators for susceptible hosts, and $\gamma$ is a handling time for susceptibe and infected hosts. A typical parameter choice is that $b=0.4,c=1/20,\theta=5,\alpha=\beta=d=0.05,P=1,\gamma=h_S=1$, which catalyze a host-parasite system coexistence in a periodic manner.
+
+#### Other Characteristics 
+
+
+Some other characteristic ignored will be listed.
+
+
+
+* Age classes&ndash;for example, young,matur,and old; time lags need to be introduced into the differential equations. 
+   
+
+* Diseases&ndash;epidemics affecting one or more species.
+   
+
+* Environmental effects.
+   
+
+* Enrichment of prey&ndash;this can lead to extinction of predators.
+   
+
+* Harvesting and culling policies.
+   
+
+* Pollution&ndash;persistence and extinction.
+   
+
+* Refuge&ndash;for example, andmals in Africa find refuge in the bush.
+
+
+
+## Limit Cycles 
+
+
+### Concepts 
+
+Limit cycles, or isolated periodic solutions, are the most common form of solution observed when modeling physical systems in the plane.
+
+**Definition of Limit Cycle**   A limit cycle is an isolated periodic solution.
+
+Perhaps the most famous class of differential equations that generalize the system similar to the oscillation are those first investigated by Li&eacute;nard in 1928,
+
+~ Equation 
+\ddot{x}+f(x)\dot{x}+g(x){x}=0
+~
+
+
+**Definition of Flow**   A flow on $\Re^2$ is a continuous mapping  $\pi:\Re^2 \rightarrow\Re^2$.
+
+
+**Definition of Orbit**
+
+
+* $\boldsymbol{I_X}$ is the maximal  intercal of existence. 
+   
+
+* The trajectory (or orbit) through $\mathbf{x}$ is defined as $\gamma(\mathbf{x})=\{\pi (\mathbf{x},t):t\in \boldsymbol{I_X}  \}$ 
+   
+
+* The positive semiorbit is defined as $\gamma^{+}(\mathbf{x})=\{\pi (\mathbf{x},t):t>0\}$ 
+   
+
+* The negative semiorbit is defined as $\gamma^{-}(\mathbf{x})=\{\pi (\mathbf{x},t):t<0 \}$ 
+
+**Definition of Limit Set**
+
+$\boldsymbol{I_X}$ is the maximal  intercal of existence. 
+
+
+* The trajectory (or orbit) through $\mathbf{x}$ is defined as $\gamma(\mathbf{x})=\{\pi (\mathbf{x},t):t\in \boldsymbol{I_X}  \}$ &br;
+   A set $S$ is invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma(\mathbf{x})\subset S$ 
+   
+
+* The positive semiorbit is defined as $\gamma^{+}(\mathbf{x})=\{\pi (\mathbf{x},t):t>0\}$&br;
+   The positive limit set of a point $\mathbf{x}$ is defined as $ %
+    \Lambda ^{\mathbf{+}}=\left \{ \mathbf{y}:\text{there exists a sequence } t_n\rightarrow\infty\text{ such that }\pi(\mathbf{x},t)\rightarrow \mathbf{y}   \right \}$ &br;
+   A set $S$ is positively invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma^{+}(\mathbf{x})\subset S$ 
+   
+
+* The negative semiorbit is defined as $\gamma^{-}(\mathbf{x})=\{\pi (\mathbf{x},t):t<0 \}$ &br;
+   The negative limit set of a point $\mathbf{x}$ is defined as $ %
+    \Lambda ^{\mathbf{-}}=\left \{ \mathbf{y}:\text{there exists a sequence } t_n\rightarrow - \infty\text{ such that }\pi(\mathbf{x},t)\rightarrow \mathbf{y}   \right \}$ &br;
+   A set $S$ is invariant with respect to a flow if $\mathbf{x}\in S$ implies that  $\gamma^{-}(\mathbf{x})\subset S$ 
+
+**Definition of Limit Cycle**
+
+A limit cycle, say, $\Gamma$, is 
+
+
+* a stable limit cycle if $\Lambda^{+}(\mathbf{x})=\Gamma$ for all $\mathbf{x}$ in some neighborhood.
+   
+
+* an unstable limit cycle if $\Lambda^{-}(\mathbf{x})=\Gamma$ for all $\mathbf{x}$ in some neighborhood.
+   
+
+* a semistable limit cycle if it is attracting on the one side and repelling on the other side.
+
+### Theorem and Application 
+
+#### The Poincar&eacute;-Bendixson Theorem 
+
+
+**The Poincar&eacute;-Bendixson Theorem** Suppose that $\gamma^+$ is contained in a bounded region in which there are finitely many critical points. Then $\Lambda^+(\gamma)$ is either
+
+
+* a single critical point;
+   
+
+* a single closed orbit;
+   
+
+* a graphic&ndash;critical points joined by heteroclinic orbits.
+
+**Corollary about Unique Limit Cycle** Let D be a bounded closed set containing no critical points and suppose that D is positively invariant. Then there exists a limit cycle contained in D.
+
+**Definition of Jordan Curve** A planar simple closed curve is called a Jordan curve.
+
+Next, consider such a universal system
+
+~ Equation { #universal system }
+\begin{aligned}
+\dot{x}= P(x,y) \dot{y}=Q(x,y)
+\end{aligned}
+~
+
+
+where $P$ and $Q$ have continuous first-order partial derivatives. $\psi$ is a weighting factor that is continuously differentiable.
+
+**Bendixson's Criteria**\/&quad;Consider system ([#universal system]) and suppose that D is a simply connected domain and that  $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)\neq 0$ in D. Then there are no limit cycles entirely contained in D.
+
+From Green's Theorem, the integrate of $\nabla\cdot(\psi \mathbf{X})$ in the region circled by limit cycle is zero. While $\nabla\cdot(\psi \mathbf{X})$ is continue on the region which cause that its sign does not change. The preceding two sentences have been contradictory.
+
+
+
+**Dulac's Criteria**\/&quad;Consider an annular region in system ([#universal system]), say, A, contained in an open set E. If 
+$\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)  $
+does not change sign in A, then there is at most one limit cycle entirely contained in A. 
+
+Apply Green's Theorem to the region between the two limit cycles, which is bound to be zero. Whereas the divergence does not change sign in A, contradictory to the fact.
+
+
+#### Index 
+
+**Definition of Index**\/&quad;The Index $\boldsymbol{I_X}(C)$ is defined as $\frac{\Delta \Theta }{2\pi}$, where $\Delta \Theta$ is the overall change in the angle $\Theta$.
+
+The index of a node, focus, or center is +1 and the index of a col is -1.
+
+**Theorem about Cycle Index Amount**\/&quad;The sum of the indices of the critical points contained entirely within a limit cycle is +1.
+
+
+**Theorem about Point-Cycle Relation**\/&quad;A limit cycle contains at least one critical point.
+
+#### Prove No cycle 
+
+
+When proving that a system has no limit cycles, the following items should be considered:
+
+
+1. Bendixson'x criteria;
+* indices;
+* invariant lines;
+* critical points.
+
+
+
+
+
+
+
+# Partial Differential Equations
+
+# Difference Equations
+
+# Methods in Mathematical Physics
+
+## Access to Equations in Physics
+Two varieties of most related to mathematical equations are:
+
+- Conservation Laws,
+- Variation Principles,
+
+other principles are also included if necessary.
+### Conservation Laws
+### Variation Principles
+
+## Wave Equations
+## Heat Conduction Equations
+## Potential Equations
+## Varieties of Second Order Linear Partial Differential Equations
+
+- Hyperbolic Equations (Wave Equations)
+~ Equation
+u_{tt} = a^2\Delta u +f
+~
+$a$ expresses the velocity of wave transmission（String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$）.
+
+- Parabolic Equations (Heat Conduction)
+~ Equation
+        u_{t}=D\Delta u+f 
+~
+
+
+
+
+
+[BIB]
+
+&pagebreak;
+
+
+~ End MainPanel
