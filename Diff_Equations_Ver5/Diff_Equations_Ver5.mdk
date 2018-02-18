@@ -368,7 +368,7 @@ Some other characteristic ignored will be listed.
 * Pollution&ndash;persistence and extinction.
    
 
-* Refuge&ndash;for example, andmals in Africa find refuge in the bush.
+* Refuge&ndash;for example, animals in Africa find refuge in the bush.
 
 
 
@@ -442,8 +442,8 @@ A limit cycle, say, $\Gamma$, is
 
 #### The Poincar&eacute;-Bendixson Theorem 
 
-
-**The Poincar&eacute;-Bendixson Theorem** Suppose that $\gamma^+$ is contained in a bounded region in which there are finitely many critical points. Then $\Lambda^+(\gamma)$ is either
+~ Theorem{caption:The Poincar&eacute;-Bendixson Theorem}
+Suppose that $\gamma^+$ is contained in a bounded region in which there are finitely many critical points. Then $\Lambda^+(\gamma)$ is either
 
 
 * a single critical point;
@@ -452,7 +452,9 @@ A limit cycle, say, $\Gamma$, is
 * a single closed orbit;
    
 
-* a graphic&ndash;critical points joined by heteroclinic orbits.
+* a graphic&ndash;critical points joined by heteroclinic orbits.(异宿轨)
+~
+
 
 **Corollary about Unique Limit Cycle** Let D be a bounded closed set containing no critical points and suppose that D is positively invariant. Then there exists a limit cycle contained in D.
 
@@ -553,6 +555,19 @@ Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^
 ~ Theorem
 The Poincar&eacute; map has a unique fixed point in $v^+$. Furthermore, the sequence $P^n(y_0)$ tends to this fixed point as $n\to \infty$ for any nonzero $y_0\in v^+$.
 ~
+
+### Exploration: Neurodynamics
+4-dimensional Hodgkin-Huxley system is used to model the neurodynamics procedure, but hard for analyzing.
+
+Fitzhugh and Nagumo et. al. produced a simpler model of the Hodgkin-Huxley model, similar to systems in circuit system. You can imagine the limit cycle is divided to 2 limit lines with ends at the origin and infinity.
+
+~ Figure{caption:Fitzhugh-Nagumo system}
+![Fitzhugh-Nagumo]
+
+[Fitzhugh-Nagumo]: images/Fitzhugh-Nagumo.jpg "Fitzhugh-Nagumo" { width:auto; max-width:90% }
+~
+
+
 # Partial Differential Equations
 
 # Difference Equations
