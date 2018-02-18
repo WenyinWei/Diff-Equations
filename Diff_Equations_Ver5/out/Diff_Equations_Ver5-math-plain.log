@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=latex 2017.3.24)  18 FEB 2018 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=latex 2017.3.24)  18 FEB 2018 15:23
 entering extended mode
 **./out/Diff_Equations_Ver5-math-plain.tex
 (./out/Diff_Equations_Ver5-math-plain.tex
@@ -569,58 +569,67 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 18.
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 297.
 
-[73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
-! Missing { inserted.
-<to be read again> 
-                   _
-l.480 $g^_
-          $\end{mdInlineSnippet}%mdk
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing { inserted.
-<to be read again> 
-                   $
-l.480 $g^_$
-           \end{mdInlineSnippet}%mdk
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! Missing } inserted.
+[73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+! Missing $ inserted.
 <inserted text> 
-                }
-l.480 $g^_$
-           \end{mdInlineSnippet}%mdk
+                $
+l.543 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.543 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ->\errmessage  LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help\@err@                                                                   
+                                                                                                                                                                                                                                    
+l.544 \]
+        %mdk
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.544 \]
+        %mdk
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.480 $g^_$
-           \end{mdInlineSnippet}%mdk
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.544 \]
+        %mdk
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
-[124] [125] [126] [127] [128] [129] [130] [131] [132] [133]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 518.
+[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 637.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 637.
 \BKM@file=\write4
 \openout4 = `Diff_Equations_Ver5-math-plain.out.ps'.
 
 (out/Diff_Equations_Ver5-math-plain.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 518.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 518.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 637.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 637.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -634,4 +643,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  48i,18n,52p,864b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/Diff_Equations_Ver5-math-plain.dvi (133 pages, 96912 bytes).
+Output written on out/Diff_Equations_Ver5-math-plain.dvi (156 pages, 114236 bytes).

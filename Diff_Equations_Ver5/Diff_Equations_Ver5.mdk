@@ -621,15 +621,113 @@ other principles are also included if necessary.
 ~ Equation
 u_{tt} = a^2\Delta u +f
 ~
-
 $a$ expresses the velocity of wave transmission (String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$).
 
 - Parabolic Equations (Heat Conduction)
 ~ Equation
         u_{t}=D\Delta u+f 
 ~
+D expresses diffusion coefficient (heat conduction). (One-dimensional conduct: $D=k/c\rho,f=F/c\rho$)
 
-## The Lorenz System
+
+* Ellipitle Equations (Describe steady state)
+~ Equation 
+        -h=\Delta u    
+~
+
+   $h$可以是静电场有关的已知量（$\Delta V=-\rho/\epsilon$）。稳定的温度场中对时间的偏导为0，可化为泊松方程。
+
+## Complete Mathematical Models 
+
+## Method of Travelling Waves 
+
+## The Method of Separation of Variables 
+
+## Integral Variable Method 
+
+所谓积分变换，就是把某函数类A中的函数经过某种可逆的积分手续，变成另一函数类的函数。这种变化可以使偏微分方程降为常微分方程，常微分方程降为代数方程。
+### Fourier Transform 
+
+
+**Fourier Integral Theorem**\/
+
+只有满足傅里叶积分定理，才能写出函数的傅里叶积分公式。
+~ Equation 
+    f(x)=\frac{1}{2\pi}\int_{\infty}^{-\infty}\left [ \int_{\infty}^{-\infty}f(\xi)e^{-i\omega \xi} d\xi \right ] e^{i\omega \xi}d\omega
+~
+
+将傅里叶积分公式中括号内的部分抽取出来即傅里叶变换。
+~ Equation { #ft }
+    G(\omega)=\int_{\infty}^{-\infty}f(\xi)e^{-i\omega x} dx
+~
+
+整个合起来则是傅里叶逆变换。
+~ Equation { #rft }
+    f(x)=\frac{1}{2\pi}\int_{\infty}^{-\infty}G(\omega) e^{i\omega \xi}d\omega
+~
+
+傅里叶变换与逆变换只要积分前的系数乘积为$1/2\pi$，便可以修改。其中的指数因子也可以正反互换。
+
+类似的，在量子力学中，由于$p=\hbar k$,则有$G(\omega)=G(p/\hbar)=C(p)$,于是有
+~ Equation 
+    \psi(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{\infty}^{-\infty}C(p)e^{\frac{i}{\hbar}px}dp
+~
+
+~ Equation 
+    C(p)=\frac{1}{\sqrt{2\pi\hbar}}\int_{\infty}^{-\infty}\psi(x)e^{\frac{i}{\hbar}px}dx
+~
+
+
+**Characteristics**\/
+
+
+
+* 线性
+~ Equation 
+        F[\alpha f_1+\beta f_2]=\alpha F[f_1]+\beta F[f_2] 
+~
+
+   
+
+* 延迟
+~ Equation 
+        F[e^{i\omega_0 x}f(x)]=G(\omega-\omega_0)    
+~
+
+
+* 位移
+~ Equation 
+        F[f(x-x_0)]=e^{-i\omega x_0}G(\omega)
+~
+    
+
+* 相似
+~ Equation 
+        F[f(ax)]=\frac{1}{|a|}G(\omega/a)    
+~
+    
+
+* 微分，若$|x|\to \infty$时，$f^{(k)}(x)\to 0,k=1,2,\cdots,n-1$
+~ Equation 
+        F[f^{(n)}(x)]=(i\omega)^{n}G(\omega) 
+~
+
+
+* 积分
+~ Equation 
+        F[\int_{x_0}^{x}f(\xi)d\xi]=\frac{1}{i\omega}G(\omega)
+~
+
+
+## Method of Green's Function 
+
+## The Variational Method 
+
+## Some Solving Methods for Nonlinear Equations and Integral Equations 
+
+## Integral Equations 
+
+
 
 
 
