@@ -230,7 +230,7 @@ By adjusting the values of parameters to make $R$ appear in the first quadrant.
 ~ Begin Figure { caption:"Two images of competing species models. (a) is a coexistence end.($\delta=d=1,\beta=b=2,\gamma=c=3$) (b) is a mutual exclusion end.($\delta=d=1,\beta=b=2,\gamma=c=0.5$) " }
 
 
-~ Table{ caption="An example table." }
+~ Table
 | (a) Coexistence | (b) Mutual Exclusion |
 |:~~~~~~~~~~~~~~~:|:~~~~~~~~~~~~~~~~~~~~:|
 | ![exclusion]    | ![coexistence]       |
@@ -500,16 +500,40 @@ When proving that a system has no limit cycles, the following items should be co
 
 
 1. Bendixson'x criteria;
-* indices;
-* invariant lines;
-* critical points.
+* Indices;
+* Invariant lines;
+* Critical points.
+
+## Applications in Circuit
+
+RLC circuit usually means the integration circuit of resistors(resistance R), inductors (inductance L) and capacitor (capacitance C). 
+
+~ Math
+\begin{aligned}
+  \frac{du}{dt}&=C^{-1}&i&\\
+  u&=R&i&\\
+  u&=L&\frac{di}{dt}&
+\end{aligned}
+~
+
+Discovers have been found when investigating the circular series connection of RLC circuit. The circuit with 3 voltages and 3 currents could be simplified to 2 variables from _Kirchhoff's current \& voltage law_(KVL & KCL) and aforementioned relationship between the voltage and current.
 
 
+~ Equation{#RLC}
+\begin{aligned}
+  L\frac{di_L}{dt}&=&v_L&=&v_C-f(i_L)\\
+  C\frac{dv_C}{dt}&=&i_C&=&-i_L\\
+\end{aligned}
+~
+The Equation [#RLC] is transformed to differential equations 
 
-
-
-
-
+~ Equation{#Lienard;caption:Lienard Equation}
+\begin{aligned}
+  \frac{dx}{dt}&=&y-f(x)\\
+  \frac{dy}{dt}&=&-x,\\
+\end{aligned}
+~
+which is called _Li&eacute;nard equation_ [#lienard].
 # Partial Differential Equations
 
 # Difference Equations
