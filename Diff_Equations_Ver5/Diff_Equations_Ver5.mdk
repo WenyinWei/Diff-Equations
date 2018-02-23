@@ -8,6 +8,10 @@ Email         : weiwy16@mails.tsinghua.edu.cn
 
 Bibliography  : example.bib
 Package       : url
+Package       : tikz
+Tex Header  : \usetikzlibrary{decorations.pathreplacing%
+                             ,decorations.pathmorphing}
+Tex Header  : \usetikzlibrary{graphics}
 Aligned { replace:"~Math&nl;\begin{aligned}&nl;&source;&nl;\end{aligned}&nl;~" }
 [INCLUDE=book]
 [INCLUDE=webtoc]
@@ -565,7 +569,6 @@ Solution curves starting on $v^+$ cross successively through $g^+$,$v^-$,and $g^
 ~ Aligned
 &\text{Circular Characteristic \& Streams do not cross}\\
   \Rightarrow & \alpha(y):v^+\rightarrow v^-  \searrow\\
- \Rightarrow & \alpha(y)+y \searrow\\
 ~
 
 
@@ -640,6 +643,33 @@ D expresses diffusion coefficient (heat conduction). (One-dimensional conduct: $
 ## Complete Mathematical Models 
 
 ## Method of Travelling Waves 
+~ Equation
+\begin{cases}
+u_{tt}=a^2 \Delta u +f(M,t)\\
+u|_{t=0}=\phi(M)\\
+u_t|_{t=0}=\psi(M)
+\end{cases}
+\Rightarrow 
+\begin{cases}
+Nonlineariation\\
+Initial\ Condition
+\end{cases}
+~
+
+~ Tex
+\begin{equation}
+\begin{cases}
+u_{tt}=a^2 \Delta u +f(M,t)\\
+u|_{t=0}=\phi(M)\\
+u_t|_{t=0}=\psi(M)
+\end{cases}
+\Rightarrow 
+\begin{cases}
+Nonlineariation\\
+Initial\ Condition
+\end{cases}
+\end{equation}
+~
 
 ## The Method of Separation of Variables 
 
