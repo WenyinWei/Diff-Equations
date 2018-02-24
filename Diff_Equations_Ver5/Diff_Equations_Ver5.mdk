@@ -9,9 +9,11 @@ Email         : weiwy16@mails.tsinghua.edu.cn
 Bibliography  : example.bib
 Package       : url
 Package       : tikz
-Tex Header  : \usetikzlibrary{decorations.pathreplacing%
+Package       : pgf
+Tex Header    :\usetikzlibrary{arrows, decorations.pathmorphing, backgrounds, positioning, fit, petri, automata}
+Tex Header    :\definecolor{yellow1}{rgb}{1,0.8,0.2} 
+Tex Header    : \usetikzlibrary{decorations.pathreplacing%
                              ,decorations.pathmorphing}
-Tex Header  : \usetikzlibrary{graphics}
 Aligned { replace:"~Math&nl;\begin{aligned}&nl;&source;&nl;\end{aligned}&nl;~" }
 [INCLUDE=book]
 [INCLUDE=webtoc]
@@ -487,7 +489,9 @@ From Green's Theorem, the integrate of $\nabla\cdot(\psi \mathbf{X})$ in the reg
 
 
 
-**Dulac's Criteria**\/&quad;Consider an annular region in system [#universal], say, A, contained in an open set E. If 
+**Dulac's Criteria**
+
+Consider an annular region in system [#universal], say, A, contained in an open set E. If 
 $\nabla\cdot(\psi \mathbf{X})=div(\psi \mathbf{X} )=\frac{\partial }{\partial x}(\psi P)+\frac{\partial }{\partial x}(\psi Q)  $
 does not change sign in A, then there is at most one limit cycle entirely contained in A. 
 
@@ -604,6 +608,7 @@ Fitzhugh and Nagumo et. al. produced a simpler model of the Hodgkin-Huxley model
 # Difference Equations
 ***
 # Methods in Mathematical Physics
+Mainly from [@DzYao2010MathematicalPhysicsMethod;@LsJiang1986MathematicalPhysicsMethod]
 ***
 ## Access to Equations in Physics
 Two varieties of most related to mathematical equations are:
@@ -615,21 +620,20 @@ other principles are also included if necessary.
 ### Conservation Laws
 ### Variation Principles
 
-## Wave Equations
-## Heat Conduction Equations
-## Potential Equations
 ## Varieties of Second Order Linear Partial Differential Equations
 
 - Hyperbolic Equations (Wave Equations)
 ~ Equation
 u_{tt} = a^2\Delta u +f
 ~
+
 $a$ expresses the velocity of wave transmission (String Vibration $a^2=T/\rho,f(x,t)=F(x,t)/\rho$).
 
 - Parabolic Equations (Heat Conduction)
 ~ Equation
         u_{t}=D\Delta u+f 
 ~
+
 D expresses diffusion coefficient (heat conduction). (One-dimensional conduct: $D=k/c\rho,f=F/c\rho$)
 
 
@@ -648,28 +652,20 @@ D expresses diffusion coefficient (heat conduction). (One-dimensional conduct: $
 u_{tt}=a^2 \Delta u +f(M,t)\\
 u|_{t=0}=\phi(M)\\
 u_t|_{t=0}=\psi(M)
-\end{cases}
-\Rightarrow 
+\end{cases}\\
 \begin{cases}
-Nonlineariation\\
-Initial\ Condition
+f(M,t)\ \ \quad\qquad \begin{cases}
+u_1(x,t)=\frac{1}{2a}\int_{0}^{t}\int_{x-a(t-\tau)}^{x+a(t-\tau)}f(\alpha,\tau)d\alpha d\tau & 1D \\ 
+u_1(M,t)=\frac{1}{4\pi a^2}\iiint_{T^M_{at}}\frac{ [f]  }{r} dv& 3D 
+\end{cases}  \\ 
+\phi(M,t),\psi(M,t) \begin{cases}
+u_2(x,t)=\frac{1}{2}[\phi(x+at)+\phi(x-at)]+\frac{1}{2a}\int_{x-at}^{x+at} \psi(\alpha)d\alpha & 1D \\ 
+u_2(M,t)=\frac{1}{4\pi a}\left [ \frac{\partial }{\partial t}\iint_{S^M_{at}}\frac{\phi(M')}{at}ds+\iint_{S^M_{at}}\frac{\psi(M')}{at}ds \right ] & 3D
+\end{cases}
 \end{cases}
 ~
 
-~ Tex
-\begin{equation}
-\begin{cases}
-u_{tt}=a^2 \Delta u +f(M,t)\\
-u|_{t=0}=\phi(M)\\
-u_t|_{t=0}=\psi(M)
-\end{cases}
-\Rightarrow 
-\begin{cases}
-Nonlineariation\\
-Initial\ Condition
-\end{cases}
-\end{equation}
-~
+
 
 ## The Method of Separation of Variables 
 
@@ -679,7 +675,7 @@ Initial\ Condition
 ### Fourier Transform 
 
 
-**Fourier Integral Theorem**\/
+**Fourier Integral Theorem**
 
 只有满足傅里叶积分定理，才能写出函数的傅里叶积分公式。
 ~ Equation 
@@ -750,8 +746,71 @@ Initial\ Condition
 
 
 ## Method of Green's Function 
+$\delta$ function definition:
+~ Equation
+\begin{cases}
+\delta(x)=0 &  x\neq 0 \\ 
+\delta(x)=\infty & x=0 \\ 
+ \int_{-\infty}^{\infty}\delta(x)dx=1& 
+\end{cases}
+~
+
+Characteristic of $\delta$:
+- $ \int_{-\infty}^{\infty}f(x)\delta(x-x_0)dx=f(x_0)$
+- $\int_{-\infty}^{\infty}f(x)\delta^{(n)}(x-a)dx=(-1)^n f^{(n)}(a)$
+- $
+\delta [\phi (x) ]=\sum_{i=1}^{k}  \frac{\delta (x-x_i)}{\left | \phi'(x_i) \right |}$
+
+
+
 
 ## The Variational Method 
+Some important extractions:
+
+- Lagrangian Multiplier Method
+~ Equation
+\begin{cases}
+J[y(x)]=\int_{a}^{b}F(x,y,y')dx \\ 
+\int_{a}^{b}G(x,y,y')dx=l  
+\end{cases}\Rightarrow 
+\delta\int_{a}^{b}[F(x,y,y')+\lambda G(x,y,y')]dx=0
+~
+
+- Euler Equations
+
+Functional of Multiple functions
+~ Equation
+J[y_1(x),y_2(x)...]=\int_{a}^{b}F(x;y_1,y_2...;y_1',y_2'...)dx   
+\Rightarrow 
+\frac{\partial F}{\partial y_i}-\frac{\mathrm{d} }{\mathrm{d} x}(\frac{\partial F}{\partial y_i'}) ,\forall k 
+~
+
+Functional related to higher order differentiate
+~ Equation
+\delta \int_{a}^{b}F(x,y,y',y'',y''')dx  =0 
+\Rightarrow 
+\frac{\partial F}{\partial y}-\frac{\mathrm{d} }{\mathrm{d} x}(\frac{\partial F}{\partial y'})+\frac{\mathrm{d} ^2}{\mathrm{d}^2 x}(\frac{\partial F}{\partial y''})-\frac{\mathrm{d}^3 }{\mathrm{d} x^3}(\frac{\partial F}{\partial y'''})  
+~
+Functional of functions with multiple variables
+~ Equation
+\delta \iiint_{v}F(x,y,z,u,u_x,u_y,u_z)dxdydz   =0
+\Rightarrow 
+\frac{\partial F}{\partial u}-\frac{\partial }{\partial x}(\frac{\partial F}{\partial u_x})-\frac{\partial }{\partial y}(\frac{\partial F}{\partial u_y})-\frac{\partial }{\partial z}(\frac{\partial F}{\partial u_z})=0  
+~
+
+
+
+
+Conclusion
+
+~ Equation
+Functional\ Extreme\begin{cases}
+Indirect & Solve\ Euler\ Equation \\ 
+Direct & Ritz\ Method
+\end{cases}
+~
+
+
 
 ## Some Solving Methods for Nonlinear Equations and Integral Equations 
 
