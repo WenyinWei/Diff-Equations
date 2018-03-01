@@ -644,9 +644,48 @@ D expresses diffusion coefficient (heat conduction). (One-dimensional conduct: $
 
    $h$可以是静电场有关的已知量（$\Delta V=-\rho/\epsilon$）。稳定的温度场中对时间的偏导为0，可化为泊松方程。
 
+
+
+$\Delta$ is different in various coordinate system.
+
+- Cylindrical
+~ Aligned
+\Delta u&=\frac{\partial^2 u}{\partial \rho^2}+\frac{1}{\rho}\frac{\partial u}{\partial \rho}+\frac{1}{\rho^2} \frac{\partial^2 u}{\partial \phi^2}+\frac{\partial^2 u}{\partial z^2}\\
+&=\frac{1}{\rho}\frac{\partial }{\partial \rho}(\rho\frac{\partial u}{\partial \rho})+\frac{1}{\rho^2} \frac{\partial^2 u}{\partial \phi^2}+\frac{\partial^2 u}{\partial z^2}
+~
+
+- Polar
+~ Equation
+\frac{1}{\rho}\frac{\partial }{\partial \rho}(\rho\frac{\partial u}{\partial \rho})+\frac{1}{\rho^2} \frac{\partial^2 u}{\partial \phi^2}
+~
+
+
+- Spherical
+
+~ Equation
+\frac{1}{r}\frac{\partial }{\partial r}(r^2 \frac{\partial u}{\partial r})+\frac{1}{r^2\sin\theta} \frac{\partial}{\partial \theta}(\sin\theta \frac{\partial u}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2 u}{\partial \phi^2}
+~
+
+~ Begin Definition{caption:Helmhotz Equation}
+
+~ Begin Equation
+\Delta v+\lambda v=0
+~ End Equation
+
+~ End Definition
+
+~ Begin Definition{caption:n-order Bessel Equation}
+
+~ Begin Equation
+x^2y''+xy'+(x^2-n^2)y=0
+~ End Equation
+
+~ End Definition
+
 ## Complete Mathematical Models 
 
 ## Method of Travelling Waves 
+
 ~ Equation
 \begin{cases}
 u_{tt}=a^2 \Delta u +f(M,t)\\
@@ -656,7 +695,7 @@ u_t|_{t=0}=\psi(M)
 \begin{cases}
 f(M,t)\ \ \quad\qquad \begin{cases}
 u_1(x,t)=\frac{1}{2a}\int_{0}^{t}\int_{x-a(t-\tau)}^{x+a(t-\tau)}f(\alpha,\tau)d\alpha d\tau & 1D \\ 
-u_1(M,t)=\frac{1}{4\pi a^2}\iiint_{T^M_{at}}\frac{ [f]  }{r} dv& 3D 
+u_1(M,t)=\frac{1}{4\pi a^2}\iiint_{T^M_{at}}\frac{ [ f ]  }{r} dv& 3D 
 \end{cases}  \\ 
 \phi(M,t),\psi(M,t) \begin{cases}
 u_2(x,t)=\frac{1}{2}[\phi(x+at)+\phi(x-at)]+\frac{1}{2a}\int_{x-at}^{x+at} \psi(\alpha)d\alpha & 1D \\ 
